@@ -1,0 +1,143 @@
+/* Submit Button Css */
+#glow-on-hover {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+#glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+#glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#glow-on-hover {
+  float: right;
+  /* margin-top: 60px; */
+}
+
+/* Sign Up Css */
+
+.right_data {
+  text-align: -webkit-center;
+}
+
+#signUpSection {
+  margin-top: 10%;
+  background-color: rgb(255, 255, 255);
+}
+
+#signUpForm {
+  width: 80%;
+}
+
+#signUpForm2 {
+  /* border-radius: 25px;
+    background-image: url("../../background.Images/shopping-bag-cart.jpg");
+    background-size: auto;
+    background-size: cover; */
+  height: auto;
+  margin-top: 64px;
+}
+#signUpForm input {
+  background-color: rgb(255, 255, 255);
+  border-top: none;
+  border-bottom: 1px solid rgb(161, 43, 43);
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+}
+#signUpForm2 input {
+  background-color: rgb(255, 255, 255);
+  border-top: none;
+  border-bottom: 1px solid rgb(161, 43, 43);
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+}
+
+.formInputs {
+  float: left;
+}
+.left_data {
+  width: 100%;
+}
+.right_data {
+  width: 100%;
+  align-self: center;
+  height: 344px;
+}
+
+/* background */
+.App {
+  height: 970px;
+  background: linear-gradient(
+    180deg,
+    rgb(162.24, 98.28, 212.5) 0%,
+    rgb(246.5, 87.3, 87.3) 100%
+  );
+}
+
+/* Inputs */
+
+#alreadyAcc {
+  font-size: 12px;
+  margin-left: 70px;
+  font-weight: bold;
+}
